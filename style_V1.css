@@ -1,28 +1,117 @@
+.background{
+    width: 450px;
+    height: 650px;
+    margin: 10px auto;
+    background: #DDDDDD;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 80px;
+    padding-right: 0px;
+    position: relative;
+    border-radius: 5px;
+}
+
 .test {
     font-size: 109px;
 }
 
-.Card {
-    width: 85px;
-    height: 115px;
-    float: left;
+.card {
+    width: 100px;
+    height: 150px;
     text-align: center;
     position: relative;
     margin: 5px;
+}
+
+.card:hover {
+    box-shadow: 2px 2px 10px #3e3e3e;
 }
 
 .bg {
-    width: 85px;
-    height: 115px;
-    color: yellow;
+    display: block;
+    background: url(img/bg.png) 0 0 no-repeat;
+    background-size: cover;
+    position: absolute;
+    border-radius: 5px;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    transition-duration: .3s;
+    transition-property: transform;
+    transform: rotate3d(0, 1, 0, 0deg);
+    -webkit-backface-visibility: hidden;
+    -webkit-transition-duration: .3s;
+    -webkit-transition-property: transform;
+    -webkit-transform: rotate3d(0, 1, 0, 0deg);
+    -moz-backface-visibility: hidden;
+    -moz-transition-duration: .3s;
+    -moz-transition-property: transform;
+    -moz-transform: rotate3d(0, 1, 0, 0deg);
 }
 
-.img{
-    width: 85px;
-    height: 115px;
+.img {
+    width: 170px;
+    height: 220px;
     float: left;
     text-align: center;
     position: relative;
     margin: 5px;
+    transform: rotate3d(0, 1, 0, -180deg);
 }
+
+.button {
+    display: block;
+    width: 325px;
+    position: absolute;
+    align-self: center;
+    font-size: 12px;
+    background: #969696;
+    border-radius: 5px;
+
+    box-shadow: 0 0 5px #EFEFEF;
+    -moz-box-shadow: 0 0 5px #EFEFEF;
+    -webkit-box-shadow: 0 0 5px #EFEFEF;
+
+    margin: 5px 12.5px;
+    padding: 5px 0px;
+
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    line-height: 15px;
+    text-align: center;
+    text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.2);
+
+    cursor: pointer;
+
+    animation-name: breathingLight;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    -webkit-animation-name: breathingLight;
+    -webkit-animation-duration: 5s;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-name: breathingLight;
+    -moz-animation-duration: 5s;
+    -moz-animation-iteration-count: infinite;
 }
+
+.cardPosition {
+    height: initial;
+    position: absolute;
+    top: 60px;
+    left: 5px;
+    right: 5px;
+    align-content: center;
+
+}
+
+.hover .img {
+    transform: rotate3d(0, 1, 0, 0deg);
+}
+
+.hover .bg {
+    transform: rotate3d(0,1,0,-180deg);
+    -webkit-transform: rotate3d(0,1,0,-180deg);
+    -moz-transform: rotate3d(0,1,0,-180deg);
+}
+
